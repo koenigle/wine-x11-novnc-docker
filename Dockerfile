@@ -24,8 +24,8 @@ ENV WINEARCH win32
 ENV DISPLAY :0
 
 WORKDIR /root/
-RUN wget -O - https://github.com/novnc/noVNC/archive/v1.6.0.tar.gz | tar -xzv -C /root/ && mv /root/noVNC-1.6.0 /root/novnc && ln -s /root/novnc/vnc_lite.html /root/novnc/index.html && \
-    wget -O - https://github.com/novnc/websockify/archive/v0.13.0.tar.gz | tar -xzv -C /root/ && mv /root/websockify-0.13.0 /root/novnc/utils/websockify
+RUN wget -qO - https://github.com/novnc/noVNC/archive/v1.6.0.tar.gz | tar -xzv -C /root/ && mv /root/noVNC-1.6.0 /root/novnc && ln -s /root/novnc/vnc_lite.html /root/novnc/index.html && \
+    wget -qO - https://github.com/novnc/websockify/archive/v0.13.0.tar.gz | tar -xzv -C /root/ && mv /root/websockify-0.13.0 /root/novnc/utils/websockify
 
 #install winetricks
 RUN apt-get update && \
