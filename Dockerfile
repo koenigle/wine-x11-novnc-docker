@@ -19,8 +19,8 @@ RUN mkdir /opt/wine-stable/share/wine/gecko && wget -qO /opt/wine-stable/share/w
 ADD supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 ADD supervisord-wine.conf /etc/supervisor/conf.d/supervisord-wine.conf
 
-ENV WINEPREFIX /root/prefix32
-ENV WINEARCH win32
+ENV WINEPREFIX /root/prefix64
+ENV WINEARCH win64
 ENV DISPLAY :0
 
 WORKDIR /root/
